@@ -8,14 +8,14 @@ A local Apache Spark application for analyzing NYC yellow taxi trips from Januar
 - Maven 3.9 or newer
 - Python 3.9 or newer only if generating charts
 
-Spark 3.5.3 is configured in `pom.xml`. The required JVM module options are in `.mvn/jvm.config`.
+Spark 3.5.3 is configured in `pom.xml`. Use JDK 17; the Maven launcher passes Spark's required JVM module options to the forked Java process.
 
 ## Run the analysis
 
 From this directory, run:
 
 ```powershell
-mvn clean compile exec:java
+mvn clean compile exec:exec
 ```
 
 Make sure Maven is using JDK 17. The first run downloads Spark and its dependencies and may take several minutes. The input files are included under `data/`.
