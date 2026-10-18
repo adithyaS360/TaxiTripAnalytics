@@ -15,7 +15,7 @@ Spark 3.5.3 is configured in `pom.xml`. Use JDK 17; the Maven launcher passes Sp
 From this directory, run:
 
 ```powershell
-mvn clean compile exec:exec
+mvn clean compile exec:exec@run-spark
 ```
 
 Make sure Maven is using JDK 17. The first run downloads Spark and its dependencies and may take several minutes. The input files are included under `data/`.
